@@ -85,7 +85,7 @@ $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   function(request){
     buildAndShowHomeHTML(request);
-  }, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  }, // ***** <---- TODO: STEP 1: Substitute [...] ****** 
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -119,7 +119,13 @@ function buildAndShowHomeHTML (categories) {
       // $dc.loadMenuItems('L')
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName", "'"+ chosenCategoryShortName +"'");
+      
+      //var homeHtmlToInsertIntoMainPage = <section class='row'>
+      // var html = homeHtml;
+      // html = insertProperty(html,"randomCategoryShortName", chosenCategoryShortName);
+      // homeHtmlToInsertIntoMainPage += html;
+      // homeHtmlToInsertIntoMainPage += "</section>";
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName", "'"+chosenCategoryShortName+"'");
 
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
